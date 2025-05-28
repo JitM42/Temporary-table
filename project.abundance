@@ -1530,6 +1530,29 @@
                     "rotate": 270
                 }
             ]
+        },
+        {
+            "atomType": "CutLayout",
+            "name": "Cut Layout",
+            "x": 0.5932291666666667,
+            "y": 0.8190709046454767,
+            "uniqueID": 1748420570480,
+            "ioValues": [
+                {
+                    "name": "Sheet Width",
+                    "ioValue": 2438
+                },
+                {
+                    "name": "Sheet Height",
+                    "ioValue": 1219
+                },
+                {
+                    "name": "Part Padding",
+                    "ioValue": 6
+                }
+            ],
+            "description": "Extracts all parts tagged for cutting and lays them out on a sheet to cut.",
+            "placements": []
         }
     ],
     "allConnectors": [
