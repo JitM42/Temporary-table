@@ -1004,7 +1004,7 @@
                 },
                 {
                     "name": "Beam height",
-                    "ioValue": 10
+                    "ioValue": 45
                 }
             ],
             "description": "Molecules provide an organizational structure to contain atoms. Double click on a molecule to enter it. Use the up arrow in the upper right hand corner of the screen to go up one level.",
@@ -1069,7 +1069,7 @@
                     "ioValues": [
                         {
                             "name": "x length",
-                            "ioValue": 10
+                            "ioValue": 45
                         },
                         {
                             "name": "y length",
@@ -1143,7 +1143,7 @@
                         },
                         {
                             "name": "zDist",
-                            "ioValue": -5
+                            "ioValue": -22.5
                         }
                     ],
                     "description": "Moves a shape laterally in X, Y, Z."
@@ -1157,7 +1157,7 @@
                     "ioValues": [
                         {
                             "name": "x",
-                            "ioValue": 10
+                            "ioValue": 45
                         }
                     ],
                     "description": "Defines a mathematical equation. Edit the output field to add or remove inputs.",
@@ -1253,7 +1253,7 @@
                 },
                 {
                     "name": "zDist",
-                    "ioValue": 799.5
+                    "ioValue": 777.5
                 }
             ],
             "description": "Moves a shape laterally in X, Y, Z."
@@ -1271,7 +1271,7 @@
                 },
                 {
                     "name": "b",
-                    "ioValue": 1
+                    "ioValue": 45
                 }
             ],
             "description": "Defines a mathematical equation. Edit the output field to add or remove inputs.",
@@ -1295,8 +1295,8 @@
         {
             "atomType": "Difference",
             "name": "Difference",
-            "x": 0.321875,
-            "y": 0.8019559902200488,
+            "x": 0.33958333333333335,
+            "y": 0.7872860635696822,
             "uniqueID": 1748419351416,
             "ioValues": [
                 {
@@ -1446,8 +1446,8 @@
         {
             "atomType": "Assembly",
             "name": "Assembly",
-            "x": 0.584375,
-            "y": 0.3985330073349633,
+            "x": 0.5854166666666667,
+            "y": 0.4205378973105135,
             "uniqueID": 1748420646398,
             "ioValues": [
                 {
@@ -1461,9 +1461,39 @@
                 {
                     "name": "Shape 3",
                     "ioValue": 1748419894434
+                },
+                {
+                    "name": "Shape 5",
+                    "ioValue": 1748424369292
                 }
             ],
             "description": "Pick between assembly and fusion to join input geometries. Assembly takes multiple shapes together into one, shapes higher in the inputs list will cut into shapes lower on the input list where they overlap. Fusion takes all shapes or sketches and fuses them permanently into a single shape"
+        },
+        {
+            "atomType": "Move",
+            "name": "Move",
+            "x": 0.44427083333333334,
+            "y": 0.841075794621027,
+            "uniqueID": 1748424369292,
+            "ioValues": [
+                {
+                    "name": "geometry",
+                    "ioValue": 1748419894434
+                },
+                {
+                    "name": "xDist",
+                    "ioValue": 850
+                },
+                {
+                    "name": "yDist",
+                    "ioValue": 0
+                },
+                {
+                    "name": "zDist",
+                    "ioValue": 0
+                }
+            ],
+            "description": "Moves a shape laterally in X, Y, Z."
         }
     ],
     "allConnectors": [
@@ -1559,11 +1589,18 @@
             "ap2ID": 1748416078383
         },
         {
-            "ap1Name": "Geometry",
-            "ap2Name": "geometry2",
+            "ap1Name": "number or geometry",
+            "ap2Name": "Beam height",
             "ap2Primary": false,
-            "ap1ID": 1748416078383,
-            "ap2ID": 1748419351416
+            "ap1ID": 1748248768965,
+            "ap2ID": 1748416192922
+        },
+        {
+            "ap1Name": "number or geometry",
+            "ap2Name": "b",
+            "ap2Primary": false,
+            "ap1ID": 1748248768965,
+            "ap2ID": 1748418180130
         },
         {
             "ap1Name": "Geometry",
@@ -1578,6 +1615,13 @@
             "ap2Primary": false,
             "ap1ID": 1748416078383,
             "ap2ID": 1748420646398
+        },
+        {
+            "ap1Name": "Geometry",
+            "ap2Name": "geometry2",
+            "ap2Primary": false,
+            "ap1ID": 1748416078383,
+            "ap2ID": 1748419351416
         },
         {
             "ap1Name": "Geometry",
@@ -1606,6 +1650,13 @@
             "ap2Primary": false,
             "ap1ID": 1748419263165,
             "ap2ID": 1748419715756
+        },
+        {
+            "ap1Name": "result",
+            "ap2Name": "xDist",
+            "ap2Primary": false,
+            "ap1ID": 1748419263165,
+            "ap2ID": 1748424369292
         },
         {
             "ap1Name": "geometry",
@@ -1652,6 +1703,13 @@
         {
             "ap1Name": "geometry",
             "ap2Name": "geometry",
+            "ap2Primary": true,
+            "ap1ID": 1748419894434,
+            "ap2ID": 1748424369292
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry",
             "ap2Primary": false,
             "ap1ID": 1748420646398,
             "ap2ID": 1748420208740
@@ -1662,6 +1720,13 @@
             "ap2Primary": false,
             "ap1ID": 1748420646398,
             "ap2ID": 1748248617522
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "Shape 5",
+            "ap2Primary": false,
+            "ap1ID": 1748424369292,
+            "ap2ID": 1748420646398
         }
     ],
     "unitsKey": "MM",
