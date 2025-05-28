@@ -1487,7 +1487,7 @@
                     "ioValues": [
                         {
                             "name": "number or geometry",
-                            "ioValue": 1748433920599
+                            "ioValue": 1748433896604
                         }
                     ],
                     "description": "Connect geometry here to make it available in the next level up. "
@@ -1565,32 +1565,6 @@
                     "description": "Extrudes a 2D shape. Input can be negitive. "
                 },
                 {
-                    "atomType": "Move",
-                    "name": "Move",
-                    "x": 0.27239583333333334,
-                    "y": 0.4009779951100244,
-                    "uniqueID": 1748433920599,
-                    "ioValues": [
-                        {
-                            "name": "geometry",
-                            "ioValue": 1748433896604
-                        },
-                        {
-                            "name": "xDist",
-                            "ioValue": 0
-                        },
-                        {
-                            "name": "yDist",
-                            "ioValue": 0
-                        },
-                        {
-                            "name": "zDist",
-                            "ioValue": 800
-                        }
-                    ],
-                    "description": "Moves a shape laterally in X, Y, Z."
-                },
-                {
                     "atomType": "Equation",
                     "name": "h-p",
                     "x": 0.16302083333333334,
@@ -1611,13 +1585,6 @@
                 }
             ],
             "allConnectors": [
-                {
-                    "ap1Name": "number or geometry",
-                    "ap2Name": "zDist",
-                    "ap2Primary": false,
-                    "ap1ID": 1748433814959,
-                    "ap2ID": 1748433920599
-                },
                 {
                     "ap1Name": "number or geometry",
                     "ap2Name": "h",
@@ -1662,27 +1629,20 @@
                 },
                 {
                     "ap1Name": "geometry",
-                    "ap2Name": "geometry",
-                    "ap2Primary": true,
-                    "ap1ID": 1748433896604,
-                    "ap2ID": 1748433920599
-                },
-                {
-                    "ap1Name": "geometry",
                     "ap2Name": "number or geometry",
                     "ap2Primary": false,
-                    "ap1ID": 1748433920599,
+                    "ap1ID": 1748433896604,
                     "ap2ID": 1748433815655
                 }
             ],
             "fileTypeVersion": 1,
-            "compiledBom": {}
+            "compiledBom": []
         },
         {
             "atomType": "Move",
             "name": "Move",
-            "x": 0.465625,
-            "y": 0.13447432762836187,
+            "x": 0.39322916666666663,
+            "y": 0.14180929095354522,
             "uniqueID": 1748434006207,
             "ioValues": [
                 {
@@ -1691,18 +1651,33 @@
                 },
                 {
                     "name": "xDist",
-                    "ioValue": 0
+                    "ioValue": 425
                 },
                 {
                     "name": "yDist",
-                    "ioValue": 0
+                    "ioValue": 1200
                 },
                 {
                     "name": "zDist",
-                    "ioValue": 0
+                    "ioValue": 777.5
                 }
             ],
             "description": "Moves a shape laterally in X, Y, Z."
+        },
+        {
+            "atomType": "Equation",
+            "name": "(w-100)/2",
+            "x": 0.31614583333333335,
+            "y": 0.08312958435207823,
+            "uniqueID": 1748434230445,
+            "ioValues": [
+                {
+                    "name": "w",
+                    "ioValue": 950
+                }
+            ],
+            "description": "Defines a mathematical equation. Edit the output field to add or remove inputs.",
+            "currentEquation": "(w-100)/2"
         }
     ],
     "allConnectors": [
@@ -1754,6 +1729,13 @@
             "ap2Primary": false,
             "ap1ID": 1748248698149,
             "ap2ID": 1748433815388
+        },
+        {
+            "ap1Name": "number or geometry",
+            "ap2Name": "w",
+            "ap2Primary": false,
+            "ap1ID": 1748248698149,
+            "ap2ID": 1748434230445
         },
         {
             "ap1Name": "number or geometry",
@@ -1883,6 +1865,13 @@
         },
         {
             "ap1Name": "result",
+            "ap2Name": "zDist",
+            "ap2Primary": false,
+            "ap1ID": 1748418180130,
+            "ap2ID": 1748434006207
+        },
+        {
+            "ap1Name": "result",
             "ap2Name": "xDist",
             "ap2Primary": false,
             "ap1ID": 1748419263165,
@@ -1908,6 +1897,13 @@
             "ap2Primary": false,
             "ap1ID": 1748419413207,
             "ap2ID": 1748416598238
+        },
+        {
+            "ap1Name": "result",
+            "ap2Name": "yDist",
+            "ap2Primary": false,
+            "ap1ID": 1748419413207,
+            "ap2ID": 1748434006207
         },
         {
             "ap1Name": "geometry",
@@ -1963,6 +1959,13 @@
             "ap2Name": "geometry",
             "ap2Primary": true,
             "ap1ID": 1748433815388,
+            "ap2ID": 1748434006207
+        },
+        {
+            "ap1Name": "result",
+            "ap2Name": "xDist",
+            "ap2Primary": false,
+            "ap1ID": 1748434230445,
             "ap2ID": 1748434006207
         }
     ],
