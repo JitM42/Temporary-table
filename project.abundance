@@ -1253,7 +1253,7 @@
                 },
                 {
                     "name": "zDist",
-                    "ioValue": 770
+                    "ioValue": 785
                 }
             ],
             "description": "Moves a shape laterally in X, Y, Z."
@@ -1279,14 +1279,14 @@
                 },
                 {
                     "name": "zDist",
-                    "ioValue": 770
+                    "ioValue": 785
                 }
             ],
             "description": "Moves a shape laterally in X, Y, Z."
         },
         {
             "atomType": "Equation",
-            "name": "h-b-p",
+            "name": "h-b",
             "x": 0.20416666666666666,
             "y": 0.491442542787286,
             "uniqueID": 1748418180130,
@@ -1298,14 +1298,10 @@
                 {
                     "name": "b",
                     "ioValue": 15
-                },
-                {
-                    "name": "p",
-                    "ioValue": 15
                 }
             ],
             "description": "Defines a mathematical equation. Edit the output field to add or remove inputs.",
-            "currentEquation": "h-b-p"
+            "currentEquation": "h-b"
         },
         {
             "atomType": "Equation",
@@ -1606,13 +1602,6 @@
             "ap2Primary": false,
             "ap1ID": 1748248737403,
             "ap2ID": 1748416192922
-        },
-        {
-            "ap1Name": "number or geometry",
-            "ap2Name": "p",
-            "ap2Primary": false,
-            "ap1ID": 1748248737403,
-            "ap2ID": 1748418180130
         },
         {
             "ap1Name": "number or geometry",
