@@ -42,7 +42,7 @@
             "ioValues": [
                 {
                     "name": "number or geometry",
-                    "ioValue": 1748419384534
+                    "ioValue": 1748420646398
                 }
             ],
             "description": "Connect geometry here to make it available in the next level up. "
@@ -1253,7 +1253,7 @@
                 },
                 {
                     "name": "zDist",
-                    "ioValue": 783.5
+                    "ioValue": 770
                 }
             ],
             "description": "Moves a shape laterally in X, Y, Z."
@@ -1279,14 +1279,14 @@
                 },
                 {
                     "name": "zDist",
-                    "ioValue": 783.5
+                    "ioValue": 770
                 }
             ],
             "description": "Moves a shape laterally in X, Y, Z."
         },
         {
             "atomType": "Equation",
-            "name": "h-b*1.1",
+            "name": "h-b-p",
             "x": 0.20416666666666666,
             "y": 0.491442542787286,
             "uniqueID": 1748418180130,
@@ -1298,10 +1298,14 @@
                 {
                     "name": "b",
                     "ioValue": 15
+                },
+                {
+                    "name": "p",
+                    "ioValue": 15
                 }
             ],
             "description": "Defines a mathematical equation. Edit the output field to add or remove inputs.",
-            "currentEquation": "h-b*1.1"
+            "currentEquation": "h-b-p"
         },
         {
             "atomType": "Equation",
@@ -1321,8 +1325,8 @@
         {
             "atomType": "Difference",
             "name": "Difference",
-            "x": 0.403125,
-            "y": 0.6136919315403423,
+            "x": 0.3859375,
+            "y": 0.6625916870415648,
             "uniqueID": 1748419351416,
             "ioValues": [
                 {
@@ -1339,8 +1343,8 @@
         {
             "atomType": "Difference",
             "name": "Difference",
-            "x": 0.4109375,
-            "y": 0.823960880195599,
+            "x": 0.38958333333333334,
+            "y": 0.8484107579462102,
             "uniqueID": 1748419368481,
             "ioValues": [
                 {
@@ -1353,32 +1357,6 @@
                 }
             ],
             "description": "Subtracts shape two from shape one."
-        },
-        {
-            "atomType": "Assembly",
-            "name": "Assembly",
-            "x": 0.6,
-            "y": 0.45232273838630804,
-            "uniqueID": 1748419384534,
-            "ioValues": [
-                {
-                    "name": "Shape 1",
-                    "ioValue": 1748416078383
-                },
-                {
-                    "name": "Shape 4",
-                    "ioValue": 1748419715756
-                },
-                {
-                    "name": "Shape 5",
-                    "ioValue": 1748419894434
-                },
-                {
-                    "name": "Shape 6",
-                    "ioValue": 1748419915832
-                }
-            ],
-            "description": "Pick between assembly and fusion to join input geometries. Assembly takes multiple shapes together into one, shapes higher in the inputs list will cut into shapes lower on the input list where they overlap. Fusion takes all shapes or sketches and fuses them permanently into a single shape"
         },
         {
             "atomType": "Equation",
@@ -1454,8 +1432,8 @@
         {
             "atomType": "Difference",
             "name": "Difference",
-            "x": 0.48854166666666665,
-            "y": 0.5819070904645477,
+            "x": 0.4630208333333333,
+            "y": 0.5403422982885085,
             "uniqueID": 1748419894434,
             "ioValues": [
                 {
@@ -1472,8 +1450,8 @@
         {
             "atomType": "Difference",
             "name": "Difference",
-            "x": 0.49374999999999997,
-            "y": 0.7555012224938876,
+            "x": 0.4666666666666667,
+            "y": 0.7481662591687042,
             "uniqueID": 1748419915832,
             "ioValues": [
                 {
@@ -1490,13 +1468,13 @@
         {
             "atomType": "CutLayout",
             "name": "Cut Layout",
-            "x": 0.6734375,
-            "y": 0.6748166259168704,
+            "x": 0.653125,
+            "y": 0.7286063569682151,
             "uniqueID": 1748420208740,
             "ioValues": [
                 {
                     "name": "geometry",
-                    "ioValue": 1748419384534
+                    "ioValue": 1748420646398
                 },
                 {
                     "name": "Sheet Width",
@@ -1515,44 +1493,47 @@
             "placements": [
                 {
                     "translate": {
-                        "x": 3099.571044921875,
-                        "y": 35.599998474121094
+                        "x": 699.5708618164062,
+                        "y": 885.599983215332
                     },
                     "id": 5,
-                    "rotate": 90
+                    "rotate": 270
                 },
                 {
                     "translate": {
-                        "x": 1236.3959960781249,
-                        "y": 956.7999572418945
+                        "x": 3636.396057153125,
+                        "y": 106.79998775810546
                     },
                     "id": 4,
-                    "rotate": 270
+                    "rotate": 90
                 }
             ]
         },
         {
-            "atomType": "CutLayout",
-            "name": "Cut Layout",
-            "x": 0.5932291666666667,
-            "y": 0.8190709046454767,
-            "uniqueID": 1748420570480,
+            "atomType": "Assembly",
+            "name": "Assembly",
+            "x": 0.584375,
+            "y": 0.3985330073349633,
+            "uniqueID": 1748420646398,
             "ioValues": [
                 {
-                    "name": "Sheet Width",
-                    "ioValue": 2438
+                    "name": "Shape 1",
+                    "ioValue": 1748419715756
                 },
                 {
-                    "name": "Sheet Height",
-                    "ioValue": 1219
+                    "name": "Shape 2",
+                    "ioValue": 1748416078383
                 },
                 {
-                    "name": "Part Padding",
-                    "ioValue": 6
+                    "name": "Shape 3",
+                    "ioValue": 1748419894434
+                },
+                {
+                    "name": "Shape 4",
+                    "ioValue": 1748419915832
                 }
             ],
-            "description": "Extracts all parts tagged for cutting and lays them out on a sheet to cut.",
-            "placements": []
+            "description": "Pick between assembly and fusion to join input geometries. Assembly takes multiple shapes together into one, shapes higher in the inputs list will cut into shapes lower on the input list where they overlap. Fusion takes all shapes or sketches and fuses them permanently into a single shape"
         }
     ],
     "allConnectors": [
@@ -1628,6 +1609,13 @@
         },
         {
             "ap1Name": "number or geometry",
+            "ap2Name": "p",
+            "ap2Primary": false,
+            "ap1ID": 1748248737403,
+            "ap2ID": 1748418180130
+        },
+        {
+            "ap1Name": "number or geometry",
             "ap2Name": "Height of beam",
             "ap2Primary": false,
             "ap1ID": 1748248752924,
@@ -1677,17 +1665,17 @@
         },
         {
             "ap1Name": "Geometry",
-            "ap2Name": "Shape 1",
-            "ap2Primary": false,
-            "ap1ID": 1748416078383,
-            "ap2ID": 1748419384534
-        },
-        {
-            "ap1Name": "Geometry",
             "ap2Name": "geometry",
             "ap2Primary": true,
             "ap1ID": 1748416078383,
             "ap2ID": 1748419672178
+        },
+        {
+            "ap1Name": "Geometry",
+            "ap2Name": "Shape 2",
+            "ap2Primary": false,
+            "ap1ID": 1748416078383,
+            "ap2ID": 1748420646398
         },
         {
             "ap1Name": "Geometry",
@@ -1760,20 +1748,6 @@
             "ap2ID": 1748419915832
         },
         {
-            "ap1Name": "geometry",
-            "ap2Name": "number or geometry",
-            "ap2Primary": false,
-            "ap1ID": 1748419384534,
-            "ap2ID": 1748248617522
-        },
-        {
-            "ap1Name": "geometry",
-            "ap2Name": "geometry",
-            "ap2Primary": false,
-            "ap1ID": 1748419384534,
-            "ap2ID": 1748420208740
-        },
-        {
             "ap1Name": "result",
             "ap2Name": "yDist",
             "ap2Primary": false,
@@ -1810,24 +1784,38 @@
         },
         {
             "ap1Name": "geometry",
-            "ap2Name": "Shape 4",
+            "ap2Name": "Shape 1",
             "ap2Primary": false,
             "ap1ID": 1748419715756,
-            "ap2ID": 1748419384534
+            "ap2ID": 1748420646398
         },
         {
             "ap1Name": "geometry",
-            "ap2Name": "Shape 5",
+            "ap2Name": "Shape 3",
             "ap2Primary": false,
             "ap1ID": 1748419894434,
-            "ap2ID": 1748419384534
+            "ap2ID": 1748420646398
         },
         {
             "ap1Name": "geometry",
-            "ap2Name": "Shape 6",
+            "ap2Name": "Shape 4",
             "ap2Primary": false,
             "ap1ID": 1748419915832,
-            "ap2ID": 1748419384534
+            "ap2ID": 1748420646398
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry",
+            "ap2Primary": false,
+            "ap1ID": 1748420646398,
+            "ap2ID": 1748420208740
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "number or geometry",
+            "ap2Primary": false,
+            "ap1ID": 1748420646398,
+            "ap2ID": 1748248617522
         }
     ],
     "unitsKey": "MM",
