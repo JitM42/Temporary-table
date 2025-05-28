@@ -110,8 +110,8 @@
         {
             "atomType": "GitHubMolecule",
             "name": "Tabel-leg",
-            "x": 0.18854166666666666,
-            "y": 0.3276283618581907,
+            "x": 0.24739583333333331,
+            "y": 0.3202933985330073,
             "uniqueID": 1748416078383,
             "ioValues": [
                 {
@@ -1332,8 +1332,8 @@
         {
             "atomType": "Rotate",
             "name": "Rotate",
-            "x": 0.2817708333333333,
-            "y": 0.17603911980440098,
+            "x": 0.3333333333333333,
+            "y": 0.13691931540342298,
             "uniqueID": 1748419672178,
             "ioValues": [
                 {
@@ -1358,8 +1358,8 @@
         {
             "atomType": "Move",
             "name": "Move",
-            "x": 0.3307291666666667,
-            "y": 0.3960880195599022,
+            "x": 0.36875,
+            "y": 0.5378973105134475,
             "uniqueID": 1748419715756,
             "ioValues": [
                 {
@@ -1400,54 +1400,10 @@
             "description": "Subtracts shape two from shape one."
         },
         {
-            "atomType": "CutLayout",
-            "name": "Cut Layout",
-            "x": 0.653125,
-            "y": 0.7286063569682151,
-            "uniqueID": 1748420208740,
-            "ioValues": [
-                {
-                    "name": "geometry",
-                    "ioValue": 1748420646398
-                },
-                {
-                    "name": "Sheet Width",
-                    "ioValue": 2400
-                },
-                {
-                    "name": "Sheet Height",
-                    "ioValue": 1200
-                },
-                {
-                    "name": "Part Padding",
-                    "ioValue": 6
-                }
-            ],
-            "description": "Extracts all parts tagged for cutting and lays them out on a sheet to cut.",
-            "placements": [
-                {
-                    "translate": {
-                        "x": 699.5708618164062,
-                        "y": 885.599983215332
-                    },
-                    "id": 5,
-                    "rotate": 270
-                },
-                {
-                    "translate": {
-                        "x": 3636.396057153125,
-                        "y": 106.79998775810546
-                    },
-                    "id": 4,
-                    "rotate": 90
-                }
-            ]
-        },
-        {
             "atomType": "Assembly",
             "name": "Assembly",
-            "x": 0.5854166666666667,
-            "y": 0.4205378973105135,
+            "x": 0.5072916666666667,
+            "y": 0.34963325183374083,
             "uniqueID": 1748420646398,
             "ioValues": [
                 {
@@ -1706,13 +1662,6 @@
             "ap2Primary": true,
             "ap1ID": 1748419894434,
             "ap2ID": 1748424369292
-        },
-        {
-            "ap1Name": "geometry",
-            "ap2Name": "geometry",
-            "ap2Primary": false,
-            "ap1ID": 1748420646398,
-            "ap2ID": 1748420208740
         },
         {
             "ap1Name": "geometry",
