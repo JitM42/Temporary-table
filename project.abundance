@@ -986,8 +986,8 @@
         {
             "atomType": "Molecule",
             "name": "Beam",
-            "x": 0.18958333333333333,
-            "y": 0.6772616136919315,
+            "x": 0.17083333333333334,
+            "y": 0.6430317848410758,
             "uniqueID": 1748416192922,
             "ioValues": [
                 {
@@ -1019,7 +1019,7 @@
                     "ioValues": [
                         {
                             "name": "number or geometry",
-                            "ioValue": 1748416343435
+                            "ioValue": 1748416398970
                         }
                     ],
                     "description": "Connect geometry here to make it available in the next level up. "
@@ -1113,7 +1113,7 @@
                         },
                         {
                             "name": "y-axis degrees",
-                            "ioValue": 0
+                            "ioValue": 90
                         },
                         {
                             "name": "z-axis degrees",
@@ -1121,6 +1121,47 @@
                         }
                     ],
                     "description": "Rotates the input geometry around the X, Y, or Z axis. Inputs are degrees."
+                },
+                {
+                    "atomType": "Move",
+                    "name": "Move",
+                    "x": 0.3614583333333333,
+                    "y": 0.6772616136919315,
+                    "uniqueID": 1748416398970,
+                    "ioValues": [
+                        {
+                            "name": "geometry",
+                            "ioValue": 1748416343435
+                        },
+                        {
+                            "name": "xDist",
+                            "ioValue": 0
+                        },
+                        {
+                            "name": "yDist",
+                            "ioValue": 0
+                        },
+                        {
+                            "name": "zDist",
+                            "ioValue": -22.5
+                        }
+                    ],
+                    "description": "Moves a shape laterally in X, Y, Z."
+                },
+                {
+                    "atomType": "Equation",
+                    "name": "-x / 2",
+                    "x": 0.2515625,
+                    "y": 0.8655256723716381,
+                    "uniqueID": 1748416448377,
+                    "ioValues": [
+                        {
+                            "name": "x",
+                            "ioValue": 45
+                        }
+                    ],
+                    "description": "Defines a mathematical equation. Edit the output field to add or remove inputs.",
+                    "currentEquation": "-x / 2"
                 }
             ],
             "allConnectors": [
@@ -1146,6 +1187,13 @@
                     "ap2ID": 1748416222425
                 },
                 {
+                    "ap1Name": "number or geometry",
+                    "ap2Name": "x",
+                    "ap2Primary": false,
+                    "ap1ID": 1748416192710,
+                    "ap2ID": 1748416448377
+                },
+                {
                     "ap1Name": "geometry",
                     "ap2Name": "geometry",
                     "ap2Primary": true,
@@ -1161,14 +1209,54 @@
                 },
                 {
                     "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
+                    "ap1ID": 1748416343435,
+                    "ap2ID": 1748416398970
+                },
+                {
+                    "ap1Name": "geometry",
                     "ap2Name": "number or geometry",
                     "ap2Primary": false,
-                    "ap1ID": 1748416343435,
+                    "ap1ID": 1748416398970,
                     "ap2ID": 1748416192689
+                },
+                {
+                    "ap1Name": "result",
+                    "ap2Name": "zDist",
+                    "ap2Primary": false,
+                    "ap1ID": 1748416448377,
+                    "ap2ID": 1748416398970
                 }
             ],
             "fileTypeVersion": 1,
-            "compiledBom": {}
+            "compiledBom": []
+        },
+        {
+            "atomType": "Move",
+            "name": "Move",
+            "x": 0.26927083333333335,
+            "y": 0.6014669926650367,
+            "uniqueID": 1748416598238,
+            "ioValues": [
+                {
+                    "name": "geometry",
+                    "ioValue": 1748416192922
+                },
+                {
+                    "name": "xDist",
+                    "ioValue": 0
+                },
+                {
+                    "name": "yDist",
+                    "ioValue": 0
+                },
+                {
+                    "name": "zDist",
+                    "ioValue": 800
+                }
+            ],
+            "description": "Moves a shape laterally in X, Y, Z."
         }
     ],
     "allConnectors": [
@@ -1178,6 +1266,13 @@
             "ap2Primary": false,
             "ap1ID": 1748248676599,
             "ap2ID": 1748416078383
+        },
+        {
+            "ap1Name": "number or geometry",
+            "ap2Name": "zDist",
+            "ap2Primary": false,
+            "ap1ID": 1748248676599,
+            "ap2ID": 1748416598238
         },
         {
             "ap1Name": "number or geometry",
@@ -1241,6 +1336,13 @@
             "ap2Primary": false,
             "ap1ID": 1748416078383,
             "ap2ID": 1748248617522
+        },
+        {
+            "ap1Name": "Geometry",
+            "ap2Name": "geometry",
+            "ap2Primary": true,
+            "ap1ID": 1748416192922,
+            "ap2ID": 1748416598238
         }
     ],
     "unitsKey": "MM",
