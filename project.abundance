@@ -1235,8 +1235,8 @@
         {
             "atomType": "Move",
             "name": "Move",
-            "x": 0.28489583333333335,
-            "y": 0.6919315403422983,
+            "x": 0.2833333333333333,
+            "y": 0.6405867970660146,
             "uniqueID": 1748416598238,
             "ioValues": [
                 {
@@ -1253,7 +1253,7 @@
                 },
                 {
                     "name": "zDist",
-                    "ioValue": 800
+                    "ioValue": 770
                 }
             ],
             "description": "Moves a shape laterally in X, Y, Z."
@@ -1271,7 +1271,7 @@
                 },
                 {
                     "name": "xDist",
-                    "ioValue": 0
+                    "ioValue": 850
                 },
                 {
                     "name": "yDist",
@@ -1279,16 +1279,16 @@
                 },
                 {
                     "name": "zDist",
-                    "ioValue": 0
+                    "ioValue": 770
                 }
             ],
             "description": "Moves a shape laterally in X, Y, Z."
         },
         {
             "atomType": "Equation",
-            "name": "h-b+b",
-            "x": 0.20572916666666666,
-            "y": 0.48166259168704156,
+            "name": "h-b*2",
+            "x": 0.20416666666666666,
+            "y": 0.491442542787286,
             "uniqueID": 1748418180130,
             "ioValues": [
                 {
@@ -1297,11 +1297,62 @@
                 },
                 {
                     "name": "b",
-                    "ioValue": 45
+                    "ioValue": 15
                 }
             ],
             "description": "Defines a mathematical equation. Edit the output field to add or remove inputs.",
-            "currentEquation": "h-b+b"
+            "currentEquation": "h-b*2"
+        },
+        {
+            "atomType": "Equation",
+            "name": "w-100",
+            "x": 0.17708333333333331,
+            "y": 0.860635696821516,
+            "uniqueID": 1748419263165,
+            "ioValues": [
+                {
+                    "name": "w",
+                    "ioValue": 950
+                }
+            ],
+            "description": "Defines a mathematical equation. Edit the output field to add or remove inputs.",
+            "currentEquation": "w-100"
+        },
+        {
+            "atomType": "Difference",
+            "name": "Difference",
+            "x": 0.403125,
+            "y": 0.6136919315403423,
+            "uniqueID": 1748419351416,
+            "ioValues": [
+                {
+                    "name": "geometry1",
+                    "ioValue": 1748416598238
+                },
+                {
+                    "name": "geometry2",
+                    "ioValue": 1748416078383
+                }
+            ],
+            "description": "Subtracts shape two from shape one."
+        },
+        {
+            "atomType": "Difference",
+            "name": "Difference",
+            "x": 0.4109375,
+            "y": 0.823960880195599,
+            "uniqueID": 1748419368481,
+            "ioValues": [
+                {
+                    "name": "geometry1",
+                    "ioValue": ""
+                },
+                {
+                    "name": "geometry2",
+                    "ioValue": ""
+                }
+            ],
+            "description": "Subtracts shape two from shape one."
         }
     ],
     "allConnectors": [
@@ -1325,6 +1376,13 @@
             "ap2Primary": false,
             "ap1ID": 1748248698149,
             "ap2ID": 1748416078383
+        },
+        {
+            "ap1Name": "number or geometry",
+            "ap2Name": "w",
+            "ap2Primary": false,
+            "ap1ID": 1748248698149,
+            "ap2ID": 1748419263165
         },
         {
             "ap1Name": "number or geometry",
@@ -1363,6 +1421,13 @@
         },
         {
             "ap1Name": "number or geometry",
+            "ap2Name": "b",
+            "ap2Primary": false,
+            "ap1ID": 1748248752924,
+            "ap2ID": 1748418180130
+        },
+        {
+            "ap1Name": "number or geometry",
             "ap2Name": "Width of beam",
             "ap2Primary": false,
             "ap1ID": 1748248768965,
@@ -1376,19 +1441,20 @@
             "ap2ID": 1748416192922
         },
         {
-            "ap1Name": "number or geometry",
-            "ap2Name": "b",
-            "ap2Primary": false,
-            "ap1ID": 1748248768965,
-            "ap2ID": 1748418180130
-        },
-        {
             "ap1Name": "Geometry",
             "ap2Name": "number or geometry",
             "ap2Primary": false,
             "ap1ID": 1748416078383,
             "ap2ID": 1748248617522
         },
+        {
+            "ap1Name": "Geometry",
+            "ap2Name": "geometry2",
+            "ap2Primary": false,
+            "ap1ID": 1748416078383,
+            "ap2ID": 1748419351416
+        },
+        null,
         {
             "ap1Name": "Geometry",
             "ap2Name": "geometry",
@@ -1404,11 +1470,32 @@
             "ap2ID": 1748418161482
         },
         {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry1",
+            "ap2Primary": false,
+            "ap1ID": 1748416598238,
+            "ap2ID": 1748419351416
+        },
+        {
             "ap1Name": "result",
             "ap2Name": "zDist",
             "ap2Primary": false,
             "ap1ID": 1748418180130,
             "ap2ID": 1748416598238
+        },
+        {
+            "ap1Name": "result",
+            "ap2Name": "zDist",
+            "ap2Primary": false,
+            "ap1ID": 1748418180130,
+            "ap2ID": 1748418161482
+        },
+        {
+            "ap1Name": "result",
+            "ap2Name": "xDist",
+            "ap2Primary": false,
+            "ap1ID": 1748419263165,
+            "ap2ID": 1748418161482
         }
     ],
     "unitsKey": "MM",
