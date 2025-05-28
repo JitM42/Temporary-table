@@ -1610,7 +1610,7 @@
             "atomType": "Move",
             "name": "Move",
             "x": 0.3989583333333333,
-            "y": 0.16625916870415647,
+            "y": 0.15892420537897312,
             "uniqueID": 1748434006207,
             "ioValues": [
                 {
@@ -1646,24 +1646,6 @@
             ],
             "description": "Defines a mathematical equation. Edit the output field to add or remove inputs.",
             "currentEquation": "(w-100)/2"
-        },
-        {
-            "atomType": "Difference",
-            "name": "Difference",
-            "x": 0.42656249999999996,
-            "y": 0.2885085574572127,
-            "uniqueID": 1748434510091,
-            "ioValues": [
-                {
-                    "name": "geometry1",
-                    "ioValue": 1748434006207
-                },
-                {
-                    "name": "geometry2",
-                    "ioValue": 1748420646398
-                }
-            ],
-            "description": "Subtracts shape two from shape one."
         }
     ],
     "allConnectors": [
@@ -1935,13 +1917,6 @@
         },
         {
             "ap1Name": "geometry",
-            "ap2Name": "geometry2",
-            "ap2Primary": false,
-            "ap1ID": 1748420646398,
-            "ap2ID": 1748434510091
-        },
-        {
-            "ap1Name": "geometry",
             "ap2Name": "Shape 5",
             "ap2Primary": false,
             "ap1ID": 1748424369292,
@@ -1953,13 +1928,6 @@
             "ap2Primary": true,
             "ap1ID": 1748433815388,
             "ap2ID": 1748434006207
-        },
-        {
-            "ap1Name": "geometry",
-            "ap2Name": "geometry1",
-            "ap2Primary": false,
-            "ap1ID": 1748434006207,
-            "ap2ID": 1748434510091
         },
         {
             "ap1Name": "result",
