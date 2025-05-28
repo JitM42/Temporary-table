@@ -1283,6 +1283,25 @@
                 }
             ],
             "description": "Moves a shape laterally in X, Y, Z."
+        },
+        {
+            "atomType": "Equation",
+            "name": "h-b+b",
+            "x": 0.20572916666666666,
+            "y": 0.48166259168704156,
+            "uniqueID": 1748418180130,
+            "ioValues": [
+                {
+                    "name": "h",
+                    "ioValue": 800
+                },
+                {
+                    "name": "b",
+                    "ioValue": 45
+                }
+            ],
+            "description": "Defines a mathematical equation. Edit the output field to add or remove inputs.",
+            "currentEquation": "h-b+b"
         }
     ],
     "allConnectors": [
@@ -1295,12 +1314,11 @@
         },
         {
             "ap1Name": "number or geometry",
-            "ap2Name": "zDist",
+            "ap2Name": "h",
             "ap2Primary": false,
             "ap1ID": 1748248676599,
-            "ap2ID": 1748416598238
+            "ap2ID": 1748418180130
         },
-        null,
         {
             "ap1Name": "number or geometry",
             "ap2Name": "Width of table",
@@ -1358,6 +1376,13 @@
             "ap2ID": 1748416192922
         },
         {
+            "ap1Name": "number or geometry",
+            "ap2Name": "b",
+            "ap2Primary": false,
+            "ap1ID": 1748248768965,
+            "ap2ID": 1748418180130
+        },
+        {
             "ap1Name": "Geometry",
             "ap2Name": "number or geometry",
             "ap2Primary": false,
@@ -1377,6 +1402,13 @@
             "ap2Primary": true,
             "ap1ID": 1748416192922,
             "ap2ID": 1748418161482
+        },
+        {
+            "ap1Name": "result",
+            "ap2Name": "zDist",
+            "ap2Primary": false,
+            "ap1ID": 1748418180130,
+            "ap2ID": 1748416598238
         }
     ],
     "unitsKey": "MM",
