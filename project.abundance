@@ -1402,8 +1402,8 @@
         {
             "atomType": "Assembly",
             "name": "Assembly",
-            "x": 0.5072916666666667,
-            "y": 0.34963325183374083,
+            "x": 0.5140625,
+            "y": 0.5354523227383863,
             "uniqueID": 1748420646398,
             "ioValues": [
                 {
@@ -1487,7 +1487,7 @@
                     "ioValues": [
                         {
                             "name": "number or geometry",
-                            "ioValue": 1748433896604
+                            "ioValue": 1748433870084
                         }
                     ],
                     "description": "Connect geometry here to make it available in the next level up. "
@@ -1547,24 +1547,6 @@
                     "description": "Creates a new rectangle."
                 },
                 {
-                    "atomType": "Extrude",
-                    "name": "Extrude",
-                    "x": 0.203125,
-                    "y": 0.39119804400978,
-                    "uniqueID": 1748433896604,
-                    "ioValues": [
-                        {
-                            "name": "geometry",
-                            "ioValue": 1748433870084
-                        },
-                        {
-                            "name": "height",
-                            "ioValue": 15
-                        }
-                    ],
-                    "description": "Extrudes a 2D shape. Input can be negitive. "
-                },
-                {
                     "atomType": "Equation",
                     "name": "h-p",
                     "x": 0.16302083333333334,
@@ -1608,13 +1590,6 @@
                 },
                 {
                     "ap1Name": "number or geometry",
-                    "ap2Name": "height",
-                    "ap2Primary": false,
-                    "ap1ID": 1748433815418,
-                    "ap2ID": 1748433896604
-                },
-                {
-                    "ap1Name": "number or geometry",
                     "ap2Name": "p",
                     "ap2Primary": false,
                     "ap1ID": 1748433815418,
@@ -1622,16 +1597,9 @@
                 },
                 {
                     "ap1Name": "geometry",
-                    "ap2Name": "geometry",
-                    "ap2Primary": true,
-                    "ap1ID": 1748433870084,
-                    "ap2ID": 1748433896604
-                },
-                {
-                    "ap1Name": "geometry",
                     "ap2Name": "number or geometry",
                     "ap2Primary": false,
-                    "ap1ID": 1748433896604,
+                    "ap1ID": 1748433870084,
                     "ap2ID": 1748433815655
                 }
             ],
@@ -1641,8 +1609,8 @@
         {
             "atomType": "Move",
             "name": "Move",
-            "x": 0.39322916666666663,
-            "y": 0.14180929095354522,
+            "x": 0.3989583333333333,
+            "y": 0.16625916870415647,
             "uniqueID": 1748434006207,
             "ioValues": [
                 {
@@ -1667,8 +1635,8 @@
         {
             "atomType": "Equation",
             "name": "(w-100)/2",
-            "x": 0.31614583333333335,
-            "y": 0.08312958435207823,
+            "x": 0.28750000000000003,
+            "y": 0.17603911980440098,
             "uniqueID": 1748434230445,
             "ioValues": [
                 {
@@ -1678,6 +1646,24 @@
             ],
             "description": "Defines a mathematical equation. Edit the output field to add or remove inputs.",
             "currentEquation": "(w-100)/2"
+        },
+        {
+            "atomType": "Difference",
+            "name": "Difference",
+            "x": 0.42656249999999996,
+            "y": 0.2885085574572127,
+            "uniqueID": 1748434510091,
+            "ioValues": [
+                {
+                    "name": "geometry1",
+                    "ioValue": 1748434006207
+                },
+                {
+                    "name": "geometry2",
+                    "ioValue": 1748420646398
+                }
+            ],
+            "description": "Subtracts shape two from shape one."
         }
     ],
     "allConnectors": [
@@ -1949,6 +1935,13 @@
         },
         {
             "ap1Name": "geometry",
+            "ap2Name": "geometry2",
+            "ap2Primary": false,
+            "ap1ID": 1748420646398,
+            "ap2ID": 1748434510091
+        },
+        {
+            "ap1Name": "geometry",
             "ap2Name": "Shape 5",
             "ap2Primary": false,
             "ap1ID": 1748424369292,
@@ -1960,6 +1953,13 @@
             "ap2Primary": true,
             "ap1ID": 1748433815388,
             "ap2ID": 1748434006207
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry1",
+            "ap2Primary": false,
+            "ap1ID": 1748434006207,
+            "ap2ID": 1748434510091
         },
         {
             "ap1Name": "result",
