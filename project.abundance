@@ -1357,8 +1357,8 @@
         {
             "atomType": "Assembly",
             "name": "Assembly",
-            "x": 0.503125,
-            "y": 0.3765281173594132,
+            "x": 0.6,
+            "y": 0.45232273838630804,
             "uniqueID": 1748419384534,
             "ioValues": [
                 {
@@ -1366,12 +1366,16 @@
                     "ioValue": 1748416078383
                 },
                 {
-                    "name": "Shape 2",
-                    "ioValue": 1748419351416
+                    "name": "Shape 4",
+                    "ioValue": 1748419715756
                 },
                 {
-                    "name": "Shape 3",
-                    "ioValue": 1748419368481
+                    "name": "Shape 5",
+                    "ioValue": 1748419894434
+                },
+                {
+                    "name": "Shape 6",
+                    "ioValue": 1748419915832
                 }
             ],
             "description": "Pick between assembly and fusion to join input geometries. Assembly takes multiple shapes together into one, shapes higher in the inputs list will cut into shapes lower on the input list where they overlap. Fusion takes all shapes or sketches and fuses them permanently into a single shape"
@@ -1394,6 +1398,94 @@
             ],
             "description": "Defines a mathematical equation. Edit the output field to add or remove inputs.",
             "currentEquation": "h*0+l/2"
+        },
+        {
+            "atomType": "Rotate",
+            "name": "Rotate",
+            "x": 0.31354166666666666,
+            "y": 0.12224938875305624,
+            "uniqueID": 1748419672178,
+            "ioValues": [
+                {
+                    "name": "geometry",
+                    "ioValue": 1748416078383
+                },
+                {
+                    "name": "x-axis degrees",
+                    "ioValue": 0
+                },
+                {
+                    "name": "y-axis degrees",
+                    "ioValue": 0
+                },
+                {
+                    "name": "z-axis degrees",
+                    "ioValue": 180
+                }
+            ],
+            "description": "Rotates the input geometry around the X, Y, or Z axis. Inputs are degrees."
+        },
+        {
+            "atomType": "Move",
+            "name": "Move",
+            "x": 0.375,
+            "y": 0.23716381418092908,
+            "uniqueID": 1748419715756,
+            "ioValues": [
+                {
+                    "name": "geometry",
+                    "ioValue": 1748419672178
+                },
+                {
+                    "name": "xDist",
+                    "ioValue": 850
+                },
+                {
+                    "name": "yDist",
+                    "ioValue": 2400
+                },
+                {
+                    "name": "zDist",
+                    "ioValue": 0
+                }
+            ],
+            "description": "Moves a shape laterally in X, Y, Z."
+        },
+        {
+            "atomType": "Difference",
+            "name": "Difference",
+            "x": 0.4765625,
+            "y": 0.5672371638141809,
+            "uniqueID": 1748419894434,
+            "ioValues": [
+                {
+                    "name": "geometry1",
+                    "ioValue": 1748419351416
+                },
+                {
+                    "name": "geometry2",
+                    "ioValue": 1748419715756
+                }
+            ],
+            "description": "Subtracts shape two from shape one."
+        },
+        {
+            "atomType": "Difference",
+            "name": "Difference",
+            "x": 0.49374999999999997,
+            "y": 0.7555012224938876,
+            "uniqueID": 1748419915832,
+            "ioValues": [
+                {
+                    "name": "geometry1",
+                    "ioValue": 1748419368481
+                },
+                {
+                    "name": "geometry2",
+                    "ioValue": 1748419715756
+                }
+            ],
+            "description": "Subtracts shape two from shape one."
         }
     ],
     "allConnectors": [
@@ -1445,6 +1537,13 @@
             "ap2Primary": false,
             "ap1ID": 1748248718986,
             "ap2ID": 1748419413207
+        },
+        {
+            "ap1Name": "number or geometry",
+            "ap2Name": "yDist",
+            "ap2Primary": false,
+            "ap1ID": 1748248718986,
+            "ap2ID": 1748419715756
         },
         {
             "ap1Name": "number or geometry",
@@ -1520,6 +1619,13 @@
             "ap1Name": "Geometry",
             "ap2Name": "geometry",
             "ap2Primary": true,
+            "ap1ID": 1748416078383,
+            "ap2ID": 1748419672178
+        },
+        {
+            "ap1Name": "Geometry",
+            "ap2Name": "geometry",
+            "ap2Primary": true,
             "ap1ID": 1748416192922,
             "ap2ID": 1748416598238
         },
@@ -1566,18 +1672,25 @@
             "ap2ID": 1748418161482
         },
         {
-            "ap1Name": "geometry",
-            "ap2Name": "Shape 2",
+            "ap1Name": "result",
+            "ap2Name": "xDist",
             "ap2Primary": false,
-            "ap1ID": 1748419351416,
-            "ap2ID": 1748419384534
+            "ap1ID": 1748419263165,
+            "ap2ID": 1748419715756
         },
         {
             "ap1Name": "geometry",
-            "ap2Name": "Shape 3",
+            "ap2Name": "geometry1",
+            "ap2Primary": false,
+            "ap1ID": 1748419351416,
+            "ap2ID": 1748419894434
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry1",
             "ap2Primary": false,
             "ap1ID": 1748419368481,
-            "ap2ID": 1748419384534
+            "ap2ID": 1748419915832
         },
         {
             "ap1Name": "geometry",
@@ -1599,6 +1712,48 @@
             "ap2Primary": false,
             "ap1ID": 1748419413207,
             "ap2ID": 1748418161482
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry",
+            "ap2Primary": true,
+            "ap1ID": 1748419672178,
+            "ap2ID": 1748419715756
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry2",
+            "ap2Primary": false,
+            "ap1ID": 1748419715756,
+            "ap2ID": 1748419894434
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry2",
+            "ap2Primary": false,
+            "ap1ID": 1748419715756,
+            "ap2ID": 1748419915832
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "Shape 4",
+            "ap2Primary": false,
+            "ap1ID": 1748419715756,
+            "ap2ID": 1748419384534
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "Shape 5",
+            "ap2Primary": false,
+            "ap1ID": 1748419894434,
+            "ap2ID": 1748419384534
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "Shape 6",
+            "ap2Primary": false,
+            "ap1ID": 1748419915832,
+            "ap2ID": 1748419384534
         }
     ],
     "unitsKey": "MM",
