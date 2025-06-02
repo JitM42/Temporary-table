@@ -1446,8 +1446,8 @@
         {
             "atomType": "Molecule",
             "name": "table top",
-            "x": 0.23854166666666668,
-            "y": 0.11246943765281173,
+            "x": 0.24791666666666667,
+            "y": 0.1295843520782396,
             "uniqueID": 1748433815388,
             "ioValues": [
                 {
@@ -1559,7 +1559,7 @@
                         },
                         {
                             "name": "y length",
-                            "ioValue": 19.75
+                            "ioValue": 33.75
                         }
                     ],
                     "description": "Creates a new rectangle."
@@ -1672,7 +1672,7 @@
                         },
                         {
                             "name": "yDist",
-                            "ioValue": 891
+                            "ioValue": 936
                         },
                         {
                             "name": "zDist",
@@ -1683,9 +1683,9 @@
                 },
                 {
                     "atomType": "Equation",
-                    "name": "l/2-h*0.33-b",
-                    "x": 0.2572916666666667,
-                    "y": 0.47432762836185816,
+                    "name": "l/2-h*0.33-0*b+0*p",
+                    "x": 0.2578125,
+                    "y": 0.46699266503667475,
                     "uniqueID": 1748871748374,
                     "ioValues": [
                         {
@@ -1699,10 +1699,14 @@
                         {
                             "name": "b",
                             "ioValue": 45
+                        },
+                        {
+                            "name": "p",
+                            "ioValue": 15
                         }
                     ],
                     "description": "Defines a mathematical equation. Edit the output field to add or remove inputs.",
-                    "currentEquation": "l/2-h*0.33-b"
+                    "currentEquation": "l/2-h*0.33-0*b+0*p"
                 },
                 {
                     "atomType": "Equation",
@@ -1779,7 +1783,7 @@
                     "ioValues": [
                         {
                             "name": "w",
-                            "ioValue": 1
+                            "ioValue": 15
                         },
                         {
                             "name": "p",
@@ -1862,6 +1866,13 @@
                     "ap2ID": 1748872260191
                 },
                 {
+                    "ap1Name": "number or geometry",
+                    "ap2Name": "p",
+                    "ap2Primary": false,
+                    "ap1ID": 1748433815418,
+                    "ap2ID": 1748871748374
+                },
+                {
                     "ap1Name": "geometry",
                     "ap2Name": "geometry1",
                     "ap2Primary": false,
@@ -1874,6 +1885,13 @@
                     "ap2Primary": true,
                     "ap1ID": 1748871485113,
                     "ap2ID": 1748871730658
+                },
+                {
+                    "ap1Name": "number or geometry",
+                    "ap2Name": "w",
+                    "ap2Primary": false,
+                    "ap1ID": 1748871498542,
+                    "ap2ID": 1748872260191
                 },
                 {
                     "ap1Name": "number or geometry",
