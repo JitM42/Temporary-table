@@ -261,11 +261,11 @@
                         },
                         {
                             "name": "yDist",
-                            "ioValue": 363.75
+                            "ioValue": 375
                         },
                         {
                             "name": "zDist",
-                            "ioValue": 762.5
+                            "ioValue": 792.5
                         }
                     ],
                     "description": "Moves a shape laterally in X, Y, Z."
@@ -279,7 +279,7 @@
                     "ioValues": [
                         {
                             "name": "x",
-                            "ioValue": 770
+                            "ioValue": 800
                         },
                         {
                             "name": "y",
@@ -302,7 +302,7 @@
                         },
                         {
                             "name": "y length",
-                            "ioValue": 996.25
+                            "ioValue": 1033.75
                         }
                     ],
                     "description": "Creates a new rectangle."
@@ -316,7 +316,7 @@
                     "ioValues": [
                         {
                             "name": "t",
-                            "ioValue": 770
+                            "ioValue": 800
                         },
                         {
                             "name": "b",
@@ -420,7 +420,7 @@
                         },
                         {
                             "name": "zDist",
-                            "ioValue": 385
+                            "ioValue": 400
                         }
                     ],
                     "description": "Moves a shape laterally in X, Y, Z."
@@ -434,7 +434,7 @@
                     "ioValues": [
                         {
                             "name": "t",
-                            "ioValue": 770
+                            "ioValue": 800
                         }
                     ],
                     "description": "Defines a mathematical equation. Edit the output field to add or remove inputs.",
@@ -449,7 +449,7 @@
                     "ioValues": [
                         {
                             "name": "t",
-                            "ioValue": 770
+                            "ioValue": 800
                         }
                     ],
                     "description": "Defines a mathematical equation. Edit the output field to add or remove inputs.",
@@ -617,7 +617,7 @@
                         },
                         {
                             "name": "zDist",
-                            "ioValue": 385
+                            "ioValue": 400
                         }
                     ],
                     "description": "Moves a shape laterally in X, Y, Z."
@@ -1253,14 +1253,14 @@
                 },
                 {
                     "name": "zDist",
-                    "ioValue": 777.5
+                    "ioValue": 800
                 }
             ],
             "description": "Moves a shape laterally in X, Y, Z."
         },
         {
             "atomType": "Equation",
-            "name": "h-b/2",
+            "name": "h",
             "x": 0.21875,
             "y": 0.5550122249388753,
             "uniqueID": 1748418180130,
@@ -1268,14 +1268,10 @@
                 {
                     "name": "h",
                     "ioValue": 800
-                },
-                {
-                    "name": "b",
-                    "ioValue": 45
                 }
             ],
             "description": "Defines a mathematical equation. Edit the output field to add or remove inputs.",
-            "currentEquation": "h-b/2"
+            "currentEquation": "h"
         },
         {
             "atomType": "Equation",
@@ -1312,22 +1308,18 @@
         },
         {
             "atomType": "Equation",
-            "name": "h*0+l/2",
+            "name": "l/2",
             "x": 0.184375,
             "y": 0.7701711491442542,
             "uniqueID": 1748419413207,
             "ioValues": [
-                {
-                    "name": "h",
-                    "ioValue": 800
-                },
                 {
                     "name": "l",
                     "ioValue": 2400
                 }
             ],
             "description": "Defines a mathematical equation. Edit the output field to add or remove inputs.",
-            "currentEquation": "h*0+l/2"
+            "currentEquation": "l/2"
         },
         {
             "atomType": "Rotate",
@@ -1627,7 +1619,7 @@
                 },
                 {
                     "name": "zDist",
-                    "ioValue": 777.5
+                    "ioValue": 800
                 }
             ],
             "description": "Moves a shape laterally in X, Y, Z."
@@ -1646,6 +1638,33 @@
             ],
             "description": "Defines a mathematical equation. Edit the output field to add or remove inputs.",
             "currentEquation": "(w-100)/2"
+        },
+        {
+            "atomType": "CutLayout",
+            "name": "Cut Layout",
+            "x": 0.5619791666666667,
+            "y": 0.8264058679706601,
+            "uniqueID": 1748870478369,
+            "ioValues": [
+                {
+                    "name": "geometry",
+                    "ioValue": 1748420646398
+                },
+                {
+                    "name": "Sheet Width",
+                    "ioValue": 1219
+                },
+                {
+                    "name": "Sheet Height",
+                    "ioValue": 2438
+                },
+                {
+                    "name": "Part Padding",
+                    "ioValue": 6
+                }
+            ],
+            "description": "Extracts all parts tagged for cutting and lays them out on a sheet to cut.",
+            "placements": []
         }
     ],
     "allConnectors": [
@@ -1662,13 +1681,6 @@
             "ap2Primary": false,
             "ap1ID": 1748248676599,
             "ap2ID": 1748418180130
-        },
-        {
-            "ap1Name": "number or geometry",
-            "ap2Name": "h",
-            "ap2Primary": false,
-            "ap1ID": 1748248676599,
-            "ap2ID": 1748419413207
         },
         {
             "ap1Name": "number or geometry",
@@ -1714,13 +1726,6 @@
         },
         {
             "ap1Name": "number or geometry",
-            "ap2Name": "l",
-            "ap2Primary": false,
-            "ap1ID": 1748248718986,
-            "ap2ID": 1748419413207
-        },
-        {
-            "ap1Name": "number or geometry",
             "ap2Name": "yDist",
             "ap2Primary": false,
             "ap1ID": 1748248718986,
@@ -1732,6 +1737,13 @@
             "ap2Primary": false,
             "ap1ID": 1748248718986,
             "ap2ID": 1748433815388
+        },
+        {
+            "ap1Name": "number or geometry",
+            "ap2Name": "l",
+            "ap2Primary": false,
+            "ap1ID": 1748248718986,
+            "ap2ID": 1748419413207
         },
         {
             "ap1Name": "number or geometry",
@@ -1781,13 +1793,6 @@
             "ap2Primary": false,
             "ap1ID": 1748248768965,
             "ap2ID": 1748416192922
-        },
-        {
-            "ap1Name": "number or geometry",
-            "ap2Name": "b",
-            "ap2Primary": false,
-            "ap1ID": 1748248768965,
-            "ap2ID": 1748418180130
         },
         {
             "ap1Name": "Geometry",
@@ -1914,6 +1919,13 @@
             "ap2Primary": false,
             "ap1ID": 1748420646398,
             "ap2ID": 1748248617522
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry",
+            "ap2Primary": false,
+            "ap1ID": 1748420646398,
+            "ap2ID": 1748870478369
         },
         {
             "ap1Name": "geometry",
