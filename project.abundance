@@ -1484,7 +1484,12 @@
                     "x": 0.98,
                     "y": 0.5,
                     "uniqueID": 1748433815655,
-                    "ioValues": [],
+                    "ioValues": [
+                        {
+                            "name": "number or geometry",
+                            "ioValue": 1748871616588
+                        }
+                    ],
                     "description": "Connect geometry here to make it available in the next level up. "
                 },
                 {
@@ -1618,7 +1623,7 @@
                     "ioValues": [
                         {
                             "name": "geometry",
-                            "ioValue": 1748433815388
+                            "ioValue": 1748871891088
                         },
                         {
                             "name": "xDist",
@@ -1638,8 +1643,8 @@
                 {
                     "atomType": "Equation",
                     "name": "(w-100)/2",
-                    "x": 0.2421875,
-                    "y": 0.5745721271393643,
+                    "x": 0.2,
+                    "y": 0.5721271393643031,
                     "uniqueID": 1748871616806,
                     "ioValues": [
                         {
@@ -1659,15 +1664,15 @@
                     "ioValues": [
                         {
                             "name": "geometry",
-                            "ioValue": ""
+                            "ioValue": 1748871485113
                         },
                         {
                             "name": "xDist",
-                            "ioValue": 0
+                            "ioValue": 425
                         },
                         {
                             "name": "yDist",
-                            "ioValue": 0
+                            "ioValue": 935
                         },
                         {
                             "name": "zDist",
@@ -1678,22 +1683,77 @@
                 },
                 {
                     "atomType": "Equation",
-                    "name": "x + y",
-                    "x": 0.21197916666666666,
-                    "y": 0.41320293398533003,
+                    "name": "l/2-h*0.33-b",
+                    "x": 0.21510416666666668,
+                    "y": 0.32273838630806845,
                     "uniqueID": 1748871748374,
                     "ioValues": [
                         {
-                            "name": "x",
-                            "ioValue": 1
+                            "name": "l",
+                            "ioValue": 2400
                         },
                         {
-                            "name": "y",
+                            "name": "h",
+                            "ioValue": 800
+                        },
+                        {
+                            "name": "b",
                             "ioValue": 1
                         }
                     ],
                     "description": "Defines a mathematical equation. Edit the output field to add or remove inputs.",
-                    "currentEquation": "x + y"
+                    "currentEquation": "l/2-h*0.33-b"
+                },
+                {
+                    "atomType": "Equation",
+                    "name": "(w-100)/2",
+                    "x": 0.2421875,
+                    "y": 0.43276283618581907,
+                    "uniqueID": 1748871828954,
+                    "ioValues": [
+                        {
+                            "name": "w",
+                            "ioValue": 950
+                        }
+                    ],
+                    "description": "Defines a mathematical equation. Edit the output field to add or remove inputs.",
+                    "currentEquation": "(w-100)/2"
+                },
+                {
+                    "atomType": "Difference",
+                    "name": "Difference",
+                    "x": 0.3875,
+                    "y": 0.23227383863080686,
+                    "uniqueID": 1748871876681,
+                    "ioValues": [
+                        {
+                            "name": "geometry1",
+                            "ioValue": 1748433870084
+                        },
+                        {
+                            "name": "geometry2",
+                            "ioValue": 1748871730658
+                        }
+                    ],
+                    "description": "Subtracts shape two from shape one."
+                },
+                {
+                    "atomType": "Extrude",
+                    "name": "Extrude",
+                    "x": 0.4916666666666667,
+                    "y": 0.2053789731051345,
+                    "uniqueID": 1748871891088,
+                    "ioValues": [
+                        {
+                            "name": "geometry",
+                            "ioValue": 1748871876681
+                        },
+                        {
+                            "name": "height",
+                            "ioValue": 15
+                        }
+                    ],
+                    "description": "Extrudes a 2D shape. Input can be negitive. "
                 }
             ],
             "allConnectors": [
@@ -1703,6 +1763,13 @@
                     "ap2Primary": false,
                     "ap1ID": 1748433814959,
                     "ap2ID": 1748871617237
+                },
+                {
+                    "ap1Name": "number or geometry",
+                    "ap2Name": "h",
+                    "ap2Primary": false,
+                    "ap1ID": 1748433814959,
+                    "ap2ID": 1748871748374
                 },
                 {
                     "ap1Name": "number or geometry",
@@ -1720,6 +1787,13 @@
                 },
                 {
                     "ap1Name": "number or geometry",
+                    "ap2Name": "w",
+                    "ap2Primary": false,
+                    "ap1ID": 1748433815440,
+                    "ap2ID": 1748871828954
+                },
+                {
+                    "ap1Name": "number or geometry",
                     "ap2Name": "y length",
                     "ap2Primary": false,
                     "ap1ID": 1748433815628,
@@ -1731,6 +1805,34 @@
                     "ap2Primary": false,
                     "ap1ID": 1748433815628,
                     "ap2ID": 1748871617141
+                },
+                {
+                    "ap1Name": "number or geometry",
+                    "ap2Name": "l",
+                    "ap2Primary": false,
+                    "ap1ID": 1748433815628,
+                    "ap2ID": 1748871748374
+                },
+                {
+                    "ap1Name": "number or geometry",
+                    "ap2Name": "height",
+                    "ap2Primary": false,
+                    "ap1ID": 1748433815418,
+                    "ap2ID": 1748871891088
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry1",
+                    "ap2Primary": false,
+                    "ap1ID": 1748433870084,
+                    "ap2ID": 1748871876681
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
+                    "ap1ID": 1748871485113,
+                    "ap2ID": 1748871730658
                 },
                 {
                     "ap1Name": "number or geometry",
@@ -1761,41 +1863,57 @@
                     "ap2ID": 1748871616588
                 },
                 {
+                    "ap1Name": "geometry",
+                    "ap2Name": "number or geometry",
+                    "ap2Primary": false,
+                    "ap1ID": 1748871616588,
+                    "ap2ID": 1748433815655
+                },
+                {
                     "ap1Name": "result",
                     "ap2Name": "xDist",
                     "ap2Primary": false,
                     "ap1ID": 1748871616806,
                     "ap2ID": 1748871616588
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry2",
+                    "ap2Primary": false,
+                    "ap1ID": 1748871730658,
+                    "ap2ID": 1748871876681
+                },
+                {
+                    "ap1Name": "result",
+                    "ap2Name": "yDist",
+                    "ap2Primary": false,
+                    "ap1ID": 1748871748374,
+                    "ap2ID": 1748871730658
+                },
+                {
+                    "ap1Name": "result",
+                    "ap2Name": "xDist",
+                    "ap2Primary": false,
+                    "ap1ID": 1748871828954,
+                    "ap2ID": 1748871730658
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
+                    "ap1ID": 1748871876681,
+                    "ap2ID": 1748871891088
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
+                    "ap1ID": 1748871891088,
+                    "ap2ID": 1748871616588
                 }
             ],
             "fileTypeVersion": 1,
             "compiledBom": []
-        },
-        {
-            "atomType": "Move",
-            "name": "Move",
-            "x": 0.3875,
-            "y": 0.19559902200489,
-            "uniqueID": 1748434006207,
-            "ioValues": [
-                {
-                    "name": "geometry",
-                    "ioValue": 1748433815388
-                },
-                {
-                    "name": "xDist",
-                    "ioValue": 425
-                },
-                {
-                    "name": "yDist",
-                    "ioValue": 1200
-                },
-                {
-                    "name": "zDist",
-                    "ioValue": 800
-                }
-            ],
-            "description": "Moves a shape laterally in X, Y, Z."
         },
         {
             "atomType": "Equation",
@@ -2072,13 +2190,6 @@
         },
         {
             "ap1Name": "result",
-            "ap2Name": "zDist",
-            "ap2Primary": false,
-            "ap1ID": 1748418180130,
-            "ap2ID": 1748434006207
-        },
-        {
-            "ap1Name": "result",
             "ap2Name": "xDist",
             "ap2Primary": false,
             "ap1ID": 1748419263165,
@@ -2104,13 +2215,6 @@
             "ap2Primary": false,
             "ap1ID": 1748419413207,
             "ap2ID": 1748416598238
-        },
-        {
-            "ap1Name": "result",
-            "ap2Name": "yDist",
-            "ap2Primary": false,
-            "ap1ID": 1748419413207,
-            "ap2ID": 1748434006207
         },
         {
             "ap1Name": "geometry",
@@ -2167,20 +2271,6 @@
             "ap2Primary": false,
             "ap1ID": 1748424369292,
             "ap2ID": 1748420646398
-        },
-        {
-            "ap1Name": "Geometry",
-            "ap2Name": "geometry",
-            "ap2Primary": true,
-            "ap1ID": 1748433815388,
-            "ap2ID": 1748434006207
-        },
-        {
-            "ap1Name": "result",
-            "ap2Name": "xDist",
-            "ap2Primary": false,
-            "ap1ID": 1748434230445,
-            "ap2ID": 1748434006207
         },
         {
             "ap1Name": "result",
